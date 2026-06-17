@@ -62,7 +62,7 @@ ninja.data = [{
         title: 'email',
         section: 'Socials',
         handler: () => {
-          window.open("mailto:%73%73%75%67%68%65%65%72%74%68%32%30%39%36@%67%6D%61%69%6C.%63%6F%6D", "_blank");
+          window.open("mailto:%73%75%67%68%65%65%72%74@%62%75%66%66%61%6C%6F.%65%64%75", "_blank");
         },
       },{
         id: 'social-linkedin',
