@@ -1,0 +1,83 @@
+{
+  "basics": {
+    "name": "Sugheerth Sreedharan",
+    "label": "PhD Researcher in Robotics",
+    "image": "",
+    "email": "ssugheerth2096@gmail.com",
+    "phone": "+1 (716) 970-9228",
+    "url": "https://sugheerth.github.io",
+    "summary": "PhD researcher at the University at Buffalo working on safe motion planning, diffusion-based trajectory generation, and sim-to-real transfer for highly articulated robotic manipulators and autonomous systems.",
+    "location": {"city": "Buffalo", "countryCode": "US", "region": "New York"},
+    "profiles": [
+      {"network": "LinkedIn", "username": "sugheerth-sreedharan-56006923a", "url": "https://www.linkedin.com/in/sugheerth-sreedharan-56006923a/"}
+    ]
+  },
+  "work": [
+    {
+      "name": "University at Buffalo (SUNY), DRONES Lab",
+      "position": "PhD Researcher and Research Assistant",
+      "location": "Buffalo, NY",
+      "startDate": "2024-05-01",
+      "endDate": "",
+      "summary": "Researching safe planning, diffusion-based planning, learned dynamics, and embodied autonomy for robotic manipulators and autonomous systems.",
+      "highlights": [
+        "Developing collision-free trajectory generation for multi-DoF robot arms using Control Barrier Functions, Control Lyapunov Functions, arm kinematics, workspace constraints, and CLF-CBF-QP solvers in CasADi.",
+        "Developing trajectory-level constraint-aware safe sampling methods that integrate closed-form CBF corrections into diffusion-model sampling updates for fast, safety-aware planning.",
+        "Designing diffusion-based trajectory planners for hydraulic excavators using learned forward and inverse LSTM dynamics models over joint angles, velocities, pressures, and control inputs.",
+        "Using learned inverse dynamics to convert MoveIt state trajectories into observation-control demonstrations and forward-dynamics guidance to promote physically coherent Gazebo and hardware execution.",
+        "Serving as Field and Software Lead for EARTH, a three-year Moog-funded project developing autonomous excavators.",
+        "Contributed Nav2 differential-drive navigation, MoveIt2 multi-link arm trajectory planning, Gazebo validation, optimized waypoint deployment on physical hardware, ROS2 lifecycle node management, and CAN bus interfacing."
+      ]
+    },
+    {
+      "name": "Zoho Corporation",
+      "position": "Member Technical Staff, Software Development Engineer",
+      "location": "Chennai, India",
+      "startDate": "2018-09-01",
+      "endDate": "2023-08-01",
+      "summary": "Built backend systems for cloud repository management and search.",
+      "highlights": [
+        "Led end-to-end development of Zoho's Cloud Repository Management System.",
+        "Engineered asynchronous search and retrieval pipelines that reduced API response time by 60 percent.",
+        "Integrated polyglot microservices with gRPC and Protobuf and redesigned database architecture to reduce redundancy by 70 percent."
+      ]
+    }
+  ],
+  "education": [
+    {"institution": "University at Buffalo (SUNY), DRONES Lab", "location": "Buffalo, NY", "area": "Computer Science", "studyType": "Doctor of Philosophy", "startDate": "2025-08-01", "endDate": "", "score": "", "courses": [], "highlights": ["Advisor: Dr. Karthik Dantu", "Focus: safe motion planning, trajectory generation using diffusion models, and sim-to-real transfer for highly articulated robotic manipulators and autonomous systems."]},
+    {"institution": "University at Buffalo (SUNY)", "location": "Buffalo, NY", "area": "Engineering Science: Robotics", "studyType": "Master of Science", "startDate": "2023-08-01", "endDate": "2025-08-01", "score": "", "courses": [], "highlights": []},
+    {"institution": "SASTRA Deemed University", "location": "Tamil Nadu, India", "area": "Mechanical Engineering", "studyType": "Bachelor of Technology", "startDate": "", "endDate": "2018-05-01", "score": "7.96/10", "courses": [], "highlights": []}
+  ],
+  "publications": [
+    {"name": "Excavation Autonomy with Resilient Traversability and Handling", "publisher": "ICRA Workshop on Field Robotics", "releaseDate": "2025-01-01", "url": "https://droneslab.github.io/EARTH/", "summary": "Workshop paper on EARTH, a framework for autonomous excavators and earth-movers."}
+  ],
+  "skills": [
+    {"name": "Robotics and Simulation", "level": "Advanced", "icon": "fa-solid fa-robot", "keywords": ["ROS2", "Gazebo", "MoveIt2", "Nav2", "URDF", "XACRO", "RViz"]},
+    {"name": "Planning, Control and Dynamics", "level": "Advanced", "icon": "fa-solid fa-route", "keywords": ["Safe Motion Planning", "Multi-DoF Kinematics/Dynamics", "CBF", "CLF", "QP", "Constrained Optimization", "CasADi", "RRT", "A-star", "AMCL", "Diffusion-based Planners"]},
+    {"name": "Machine Learning and Perception", "level": "Advanced", "icon": "fa-solid fa-brain", "keywords": ["Generative Learning", "Diffusion Models", "Deep Learning", "Reinforcement Learning", "Sim-to-Real Transfer", "PyTorch", "PointNet", "Vision Transformer", "MMDetection3D", "3D Point Cloud Segmentation", "State Estimation"]},
+    {"name": "Programming and Systems", "level": "Advanced", "icon": "fa-solid fa-code", "keywords": ["Python", "C++", "C", "Java", "Go", "MATLAB", "Git", "Docker", "Linux", "gRPC", "Protobuf", "PostgreSQL"]}
+  ],
+  "projects": [
+    {
+      "name": "A Constraint Aware Framework For Safe Sampling",
+      "description": "Ongoing L4DC-targeted research on deterministic safe sampling for diffusion-based trajectory planners.",
+      "highlights": [
+        "Developing a deterministic safe sampling framework that integrates a closed-form trajectory-level CBF correction directly into diffusion-model sampling updates.",
+        "Formulated a single smooth trajectory-level CBF by aggregating obstacle- and waypoint-level constraints through nested softmin approximations.",
+        "Derived a first-order DPM-Solver discretization of the safety-augmented probability-flow ODE and delayed CBF corrections until final denoising steps to reduce local-trap formation.",
+        "Demonstrated 100 percent trajectory safety across evaluated Maze2D settings and a 91 percent safe-success rate in dense PointMass2D while generating trajectories in 0.05-0.07 seconds."
+      ],
+      "url": "https://droneslab.github.io/SENTINEL/"
+    },
+    {
+      "name": "Diffusion-based Trajectory Planning for Excavators with Learned Dynamics Models",
+      "description": "Ongoing L4DC-targeted research on dynamically coherent trajectory generation for hydraulic excavators.",
+      "highlights": [
+        "Designing a diffusion-based trajectory generation framework with learned dynamics models to generate dynamically coherent observation-control trajectories for hydraulic excavators.",
+        "Engineered forward and inverse LSTM dynamics models over rolling histories of joint angles, joint velocities, hydraulic pressures, and control inputs for boom, arm, and bucket motion.",
+        "Using learned inverse dynamics to convert MoveIt state trajectories into observation-control demonstrations and forward-dynamics guidance to promote physically coherent Gazebo and hardware execution."
+      ],
+      "url": "https://droneslab.github.io/EARTH/#diffusion-trajectory-planning"
+    }
+  ]
+}
