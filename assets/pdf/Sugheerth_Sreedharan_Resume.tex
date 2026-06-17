@@ -1,0 +1,219 @@
+%-------------------------
+% ATS-Compliant Resume
+% Author: Sugheerth Sreedharan
+% Tailored for: Robotics Manipulation & Humanoids
+%-------------------------
+
+\documentclass[letterpaper,10.5pt]{article}
+
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage[english]{babel}
+\usepackage{microtype}
+\ifx\pdfglyphtounicode\undefined
+\else
+  \input{glyphtounicode}
+  \pdfgentounicode=1
+\fi
+
+% Margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-0.6in}
+\addtolength{\textheight}{1.2in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+\setlength{\parindent}{0pt}
+
+\titleformat{\section}
+  {\vspace{-6pt}\bfseries\raggedright\normalsize}
+  {}{0em}{\MakeUppercase}[\titlerule\vspace{-4pt}]
+
+\newcommand{\entryheading}[4]{%
+  \vspace{2pt}%
+  {\bfseries #1} \hfill #2 \\%
+  {\itshape #3} \hfill {\itshape #4}%
+  \vspace{-4pt}%
+}
+
+\newcommand{\projectheading}[2]{%
+  \vspace{2pt}%
+  {\bfseries #1} \hfill #2%
+  \vspace{-4pt}%
+}
+
+\newcommand{\resumeItemListStart}{%
+  \begin{itemize}[leftmargin=0.2in, itemsep=-1pt, topsep=2pt, label={--}]\small%
+}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-2pt}}
+\newcommand{\resumeItem}[1]{\item #1}
+
+\newcommand{\sectionliststart}{\begin{itemize}[leftmargin=0in, label={}, itemsep=2pt]}
+\newcommand{\sectionlistend}{\end{itemize}}
+
+%-------------------------------------------
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+  {\LARGE\bfseries Sugheerth Sreedharan}\\[4pt]
+  \small
+  +1 (716) 970-9228
+  \textbar{}
+  \href{mailto:ssugheerth2096@gmail.com}{ssugheerth2096@gmail.com}
+  \textbar{}
+  \href{https://sugheerth.github.io}{sugheerth.github.io}
+  \textbar{}
+  \href{https://www.linkedin.com/in/sugheerth-sreedharan-56006923a/}{www.linkedin.com/in/sugheerth-sreedharan-56006923a/}
+\end{center}
+\vspace{-6pt}
+
+%-----------EDUCATION-----------
+\section{Education}
+\sectionliststart
+  \setlength{\itemsep}{0pt}
+  \setlength{\parsep}{0pt}
+  \item
+    \entryheading
+      {Doctor of Philosophy, Computer Science}{Fall 2025 -- Present}
+      {University at Buffalo (SUNY), DRONES Lab -- Advisor: Dr. Karthik Dantu}{Buffalo, NY}
+
+    \small{Focus: Safe motion planning, trajectory generation using diffusion models, and sim-to-real transfer for highly articulated robotic manipulators and autonomous systems.}
+  \item
+    \entryheading
+      {Master of Science, Engineering Science: Robotics}{Aug 2023 -- Aug 2025}
+      {University at Buffalo (SUNY)}{Buffalo, NY}
+  \item
+    \entryheading
+      {Bachelor of Technology, Mechanical Engineering}{May 2018}
+      {SASTRA Deemed University -- GPA: 7.96/10}{Tamil Nadu, India}
+\sectionlistend
+
+%-----------SKILLS-----------
+\section{Skills}
+\sectionliststart
+  \item\small{
+    \textbf{Robotics and Simulation:}
+    ROS2 (Actions, Services, Lifecycle Nodes), Gazebo, MoveIt2, Nav2, URDF, XACRO, RViz\\
+    \textbf{Planning, Control \& Dynamics:}
+    Safe Motion Planning, Multi-DoF Kinematics/Dynamics, Control Barrier Functions (CBF), Control Lyapunov Functions (CLF), Quadratic Programming (QP),
+    Constrained Optimization, CasADi, RRT, A-star, AMCL, Diffusion-based Planners\\
+    \textbf{Machine Learning and Perception:}
+    Generative Learning, Diffusion Models, Deep/Reinforcement Learning, Sim-to-Real Transfer, PyTorch, PointNet, Vision Transformer (ViT), MMDetection3D, 3D Point Cloud Segmentation, State Estimation\\
+    \textbf{Programming:} Python, C++, C, Java, Go, MATLAB \quad
+    \textbf{Tools:} Git, Docker, Linux, gRPC, Protobuf, PostgreSQL
+  }
+\sectionlistend
+
+%-----------RESEARCH EXPERIENCE-----------
+\section{Experience}
+\sectionliststart
+  \item
+    \entryheading
+      {PhD Researcher and Research Assistant, DRONES Lab}{May 2024 -- Present}
+      {University at Buffalo (SUNY)}{Buffalo, NY}
+    \resumeItemListStart
+      \resumeItem{\textbf{Safe Planning for Robotic Manipulators:}
+        Developing collision-free trajectory generation for multi-DoF robot arms using Control Barrier Functions (CBF)
+        and Control Lyapunov Functions (CLF) with arm kinematics and workspace constraints like collision points; formulating
+        CLF-CBF-QP for real-time safe reactive control via CasADi; extending from 2-DoF planar arms
+        to full 3D multi-DoF configurations; exploring learning-based and generative methods, especially,
+        diffusion-based planners for safe trajectory generation.}
+      \resumeItem{\textbf{Diffusion-based Planning and Safe Sampling:}
+        Developing trajectory-level constraint-aware safe sampling methods that integrate closed-form CBF corrections into diffusion-model sampling updates for fast, safety-aware planning; designing diffusion planners for hydraulic excavators with learned forward and inverse LSTM dynamics models over joint angles, velocities, pressures, and control inputs.}
+      \resumeItem{\textbf{Learned Dynamics for Excavator Trajectory Generation:}
+        Using learned inverse dynamics to convert MoveIt state trajectories into observation-control demonstrations and forward-dynamics guidance to promote physically coherent Gazebo and hardware execution for hydraulic excavators.}
+      \resumeItem{\textbf{EARTH -- Excavation Autonomy with Resilient Traversability and Handling}
+        (\href{https://droneslab.github.io/EARTH/}{droneslab.github.io/EARTH}):
+        Serving as Field and Software Lead for EARTH, a three-year Moog-funded project developing autonomous excavators.
+        Contributed to 
+        % CLF-CBF-QP based safe control modeling arm kinematics, 
+        Nav2-based differential drive navigation, and
+        MoveIt2 multi-link arm trajectory planning. Validated dynamics in Gazebo and deployed using optimized waypoints on physical hardware via ROS2 lifecycle node management and CAN bus interfacing.}
+    \resumeItemListEnd
+  \item
+    \entryheading
+      {Member Technical Staff, Software Development Engineer}{Sep 2018 -- Aug 2023}
+      {Zoho Corporation}{Chennai, India}
+    \resumeItemListStart
+      \resumeItem{Led end-to-end development of Zoho's Cloud Repository Management System; engineered search pipeline achieving low latency retrieval and reduced API response time by 60 percent via asynchronous scheduling.}
+      \resumeItem{Integrated polyglot microservices via gRPC and Protobuf reducing max latency by over 200 percent; redesigned database architecture reducing data redundancy by 70 percent.}
+    \resumeItemListEnd
+\sectionlistend
+
+%-----------ONGOING RESEARCH-----------
+\section{Ongoing Research}
+\sectionliststart
+  \item
+    \projectheading{A Constraint Aware Framework For Safe Sampling}
+    \resumeItemListStart
+      \resumeItem{Developing a deterministic safe sampling framework that integrates a closed-form trajectory-level CBF correction directly into diffusion-model sampling updates for fast, safety-aware trajectory generation.}
+      \resumeItem{Formulated a single smooth, trajectory-level CBF by aggregating obstacle- and waypoint-level constraints through nested softmin approximations, enabling a closed-form safety correction that applies weighted updates across waypoints according to their relative safety. }
+      \resumeItem{Derived a first-order DPM-Solver discretization of the safety-augmented probability-flow ODE and delayed CBF corrections until the final denoising steps to reduce local-trap formation.}
+      \resumeItem{Demonstrated 100\% trajectory safety across the evaluated Maze2D settings and a 91\% safe-success rate in the dense PointMass2D environment, while generating trajectories in 0.05–0.07 seconds.}
+    \resumeItemListEnd
+
+  \item
+    \projectheading{Diffusion-based Trajectory Planning for Excavators with Learned Dynamics Models}
+    \resumeItemListStart
+      \resumeItem{Designing a diffusion-based trajectory generation framework with learned dynamics models to generate dynamically coherent observation-control trajectories for hydraulic excavators.}
+      \resumeItem{Engineered forward and inverse LSTM dynamics models over rolling histories of joint angles, joint velocities, hydraulic pressures, and control inputs for boom, arm, and bucket motion.}
+      \resumeItem{Using learned inverse dynamics to convert MoveIt state trajectories into observation-control demonstrations and forward-dynamics guidance to promote physically coherent Gazebo and hardware execution.}
+    \resumeItemListEnd
+\sectionlistend
+
+%-----------PUBLICATIONS-----------
+\section{Publications}
+\sectionliststart
+  \item\small{
+    Y. Turkar, C. Aluckal, \textbf{S. Sreedharan}, Y. Dighe, Y. Kim, J. Gemerek, K. Dantu.
+    ``Excavation Autonomy with Resilient Traversability and Handling.''
+    \textit{ICRA Workshop on Field Robotics (WFR)}, 2025.
+    \href{https://droneslab.github.io/EARTH/static/docs/EARTH_WFR_Optimized.pdf}{[PDF]}
+  }
+\sectionlistend
+
+%-----------WORK EXPERIENCE-----------
+% \section{Work Experience}
+% \sectionliststart
+%   \item
+%     \entryheading
+%       {Member Technical Staff, Software Development Engineer}{Sep 2018 -- Aug 2023}
+%       {Zoho Corporation}{Chennai, India}
+%     \resumeItemListStart
+%       \resumeItem{Led end-to-end development of Zoho's Cloud Repository Management System; engineered search pipeline achieving low latency retrieval and reduced API response time by 60 percent via asynchronous scheduling.}
+%       \resumeItem{Integrated polyglot microservices via gRPC and Protobuf reducing max latency by over 200 percent; redesigned database architecture reducing data redundancy by 70 percent.}
+%     \resumeItemListEnd
+% \sectionlistend
+
+%-----------PROJECTS-----------
+\section{Course Projects}
+\sectionliststart
+  \item
+    \projectheading{3D Point Cloud Segmentation -- PointNet, MMDetection3D, PyTorch, SemanticKITTI}{Aug -- Dec 2024}
+    \resumeItemListStart
+      \resumeItem{Implemented PointNet for LiDAR-based outdoor semantic segmentation; benchmarked against MMDetection3D baselines; explored attention mechanisms and loss combinations (focal, dice, Jaccard); achieved 71 percent training and 62 percent test accuracy on SemanticKITTI.}
+    \resumeItemListEnd
+
+  \item
+    \projectheading{Object Detection with Vision Transformer (ViT) -- PyTorch, Caltech-101}{Jan -- May 2024}
+    \resumeItemListStart
+      \resumeItem{Implemented Vision Transformer with Patch Embeddings for object detection; achieved mean IoU of 88.4 percent on Caltech-101 airplanes dataset.}
+    \resumeItemListEnd
+
+  \item
+    \projectheading{Robotics Algorithms and Autonomous Racing -- ROS2, F1TENTH}{Aug -- Dec 2023}
+    \resumeItemListStart
+      \resumeItem{Implemented motion planning (RRT, A-star, Dijkstra), localization (AMCL, Particle Filter, Pure Pursuit), and Gap Follow for autonomous racing; secured 2nd place in gap follow race; implemented stereo visual odometry for state estimation.}
+    \resumeItemListEnd
+\sectionlistend
+
+%-------------------------------------------
+\end{document}
